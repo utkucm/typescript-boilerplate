@@ -1,0 +1,59 @@
+{
+  "name": "typescript-starter",
+  "version": "1.0.0",
+  "description": "Basic Typescript starter boilerplate",
+  "author": {
+    "email": "utkucam2@gmail.com",
+    "name": "Utku Çam",
+    "url": "https://github.com/utkucm"
+  },
+  "repository": {
+    "type": "git",
+    "directory": ".",
+    "url": "https://github.com/utkucm/typescript-boilerplate"
+  },
+  "bugs": {
+    "email": "utkucam2@gmail.com",
+    "url": "https://github.com/utkucm/typescript-boilerplate/issues"
+  },
+  "main": "src/index.ts",
+  "scripts": {
+    "build": "rimraf ./build && tsc",
+    "start": "yarn build && node build/index.js",
+    "start:dev": "nodemon",
+    "lint": "eslint . --ext .ts",
+    "prettier-format": "run-script-os",
+    "prettier-format:win32": "prettier --config .prettierrc \"./src/**/*.ts\" --write",
+    "prettier-format:darwin:linux": "prettier --config .prettierrc 'src/**/*.ts' --write",
+    "prettier-format:default": "prettier --config .prettierrc 'src/**/*.ts' --write",
+    "prettier-watch": "run-script-os",
+    "prettier-watch:win32": "onchange \"src/**/*.ts\" -- prettier --write {{changed}}",
+    "prettier-watch:darwin:linux": "onchange 'src/**/*.ts' -- prettier --write {{changed}}",
+    "prettier-watch:default": "onchange 'src/**/*.ts' -- prettier --write {{changed}}",
+    "test": "jest",
+    "test:dev": "jest --watchAll"
+  },
+  "keywords": [
+    "Typescript",
+    "Starter",
+    "Boilerplate"
+  ],
+  "license": "MIT",
+  "devDependencies": {
+    "@types/jest": "^27.0.3",
+    "@types/node": "^16.11.9",
+    "@typescript-eslint/eslint-plugin": "^5.4.0",
+    "@typescript-eslint/parser": "^5.4.0",
+    "eslint": "^8.2.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "husky": "^7.0.4",
+    "nodemon": "^2.0.15",
+    "onchange": "^7.1.0",
+    "prettier": "^2.4.1",
+    "rimraf": "^3.0.2",
+    "run-script-os": "^1.1.6",
+    "ts-node": "^10.4.0",
+    "typescript": "^4.5.2"
+  }
+}
